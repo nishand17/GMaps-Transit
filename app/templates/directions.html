@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="utf-8">
+          <title></title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <style>
+
+            #map {
+              height: 100%;
+            }
+
+            html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+            </style>
+     </head>
+     <body>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">LookingBus Transit Portal</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                 <li class="nav-item active">
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="{{ url_for('index') }}">Home</a>          
+                   <a class="btn btn-outline-success my-2 my-sm-0" href="{{ url_for('logout') }}">Logout</a>
+                  </li>
+
+            </ul>
+          </div>
+       </nav>
+          <div id="map"></div>
+          <script>
+          function initMap() {
+
+             // Instantiate a directions service.
+             var directionsService = new google.maps.DirectionsService();
+             var directionsDisplay = new google.maps.DirectionsRenderer({
+                preserveViewport: true, // prevent auto zoom to result
+                suppressMarkers: true
+              });
+
+             // Create a map and center it on Manhattan.
+             var map = new google.maps.Map(document.getElementById('map'), {
+               zoom: 16,
+               center: {lat: {{map_lat}}, lng: {{map_lon}}}
+             });
+             var mapLatLon = {lat: {{map_lat}}, lng: {{map_lon}}};
+             var myLatLng = {lat: {{bus_lat}}, lng: {{bus_lon}}};
+             var mapLatLon2 = {lat: {{dest_lat}}, lng: {{dest_lon}}};
+             var marker = new google.maps.Marker({
+               position: myLatLng,
+               map: map,
+               title: 'Bus Location'
+             });
+
+             directionsDisplay.setMap(map);
+
+             var request = {
+                  origin: "{{origin}}",
+                  destination: "{{dest}}",
+                  travelMode: 'TRANSIT',
+                  transitOptions: {
+                    modes: ['BUS'],
+                    routingPreference: 'FEWER_TRANSFERS'
+                  },
+                  unitSystem: google.maps.UnitSystem.IMPERIAL
+             };
+
+             var bounds = new google.maps.LatLngBounds();
+             bounds.extend(myLatLng);
+             bounds.extend(mapLatLon);
+             bounds.extend(mapLatLon2);
+             map.fitBounds(bounds);
+
+             directionsService.route(request, function(result, status) {
+                   if (status == 'OK') {
+                     directionsDisplay.setDirections(result);
+                   }
+                 });
+
+            }
+        </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_2x6LiC8Omy_NJrV06uO5zjwBSwfIZvQ&libraries=places&callback=initMap"
+               async defer></script>
+     </body>
+</html>

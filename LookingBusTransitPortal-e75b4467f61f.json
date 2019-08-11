@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lookingbus-transit-portal",
+  "private_key_id": "e75b4467f61fe9550e7f47d667cba15e179f6911",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDqEuei1Duwja4B\nleJqs3HJWhwbnW+V28eOPvXRXnPA11dE6QEO2bd7580cD/mQCJdE0gtI+CVjEl0o\nWrm7Yg9fzPlLYIwTJYUnodb3UxrRJGiwRE8QiHjtHzUPramthRWM3Fvj8XwhFpR9\nUWxsEKUd9EQRuga9BSxo2X/L/SrlskO9rEk+ciIY7ykjmVL5loh8evIrIbVod35E\nnAYz5tMR8F1XzUrAyP38pRXjim9bSiFT1E2Lj2gGSN6zD4BxE2R+tNm82Q2jY87h\nn8tOboHxUAy+zSrkGPMxh6S62wfC2xPLLP0m6Zzd/TEI7ZbWg40x2QDf1lHdlJ/q\n57zYFTVVAgMBAAECggEAEx7nOBhhJdt09uExBSlSZrHLMQBL0LCK3RZMi0VNbFfK\n47Cq6vUi9WaqjRvK9ZaWEMOds2C94RlrbbP3jxSED/3U8XDaEGhUt7eTMVHjE2mH\nebqiwMV9J1WQxo6XmTqRV5fak8SysJtBFvmTQ0Ka0lcVRmNtUHx/M7NsqpOsMOYW\neuzq82Oe9EVoO1cfylF+9+WajO+NhW6hKEQCEI6TxKkwVF9Lokik6Sikwkh+eRlR\ni8VZWUfufr/bAF8sLM2/gqMznZ6HfB7umVsch85ZMwqOynNW+QkgwSkiSjGZCbW+\nW4MEO1ml+uQlFIwGWYxRM4wr6p09sApXJX+NVFqKgQKBgQD8DfV0ifLSxx4iwDuJ\nK7aIOiVA4NQoSdffdwkLOcJzk6qHvDyLAZiWX9ZQvEPZUzHs+z9ruWF1mG0VCy/a\nyZ5IWx6ycpOG9hrj9ebOIem6PomN8pt+uU82mRUgf1XgBkoknWWQszAOFoh+kuGD\nES/6gTYKUEoF8EDyu31AH14KwQKBgQDtvOSr5o+BDoSDnWC/MOszbkbxXbZrt/jx\nOXJBmlp9ITf9v7wSqViowG4t56PkmBaMO8BqbygNUZrD+nLzrBl/TCzFlIchB7Dj\n1Gyy6ibEbZGXZnPVg0XKKY9alxloU1m5TF2KUk4RfbBUOWhNLJuf5QExSv3gaoQh\n3yp3LdSzlQKBgQCWFAGoqFLLKgBJlMhePobqyiRQYw4wBvfgeNILuxKLGsuZEn3C\nDus57kp/u/lyN1Us09TJYZIkIOQieYy+6vmx/39hpVMuMu+D+HC7H/o5CO+Cc4ge\nhlwiGDg6J1eMknInJwjIhckBOm1/YBminuNAdxskPPY2Xv1tCjHjskmegQKBgQCC\n0AZPZC0gSTm3JfifGy6//PUCSJtgyDktmnt5B5K0+XtSn5a/+fiz2jaGAciXtuvp\nO9OTfRhfw8BSB9QKqm7ZMbQM/74e+Zlms3MgO2EbgmKzGQexu2rCY33izfOICRz8\nrb1mqAUW8L7+iRwQIvR61cqDMg1h15pe/Onj7A72xQKBgQDnBJoY45sp+hB8FghD\nCq76f2ZcLaifWsOA8bkP3M9M1jQ1xS+ZHHuVb8qRgSJGMdJtL8boCXWb4yN8WBCg\ndvCyr4B3TD/8LPSrc3dO7tooM+fUwyYS/b453+o98olEb8C7Zrfb/mQWOV1BWTsp\nWMggrl1H8WKKcWkC2ZL+yX5T6w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nishan-d-souza@lookingbus-transit-portal.iam.gserviceaccount.com",
+  "client_id": "117760291764948427520",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nishan-d-souza%40lookingbus-transit-portal.iam.gserviceaccount.com"
+}
